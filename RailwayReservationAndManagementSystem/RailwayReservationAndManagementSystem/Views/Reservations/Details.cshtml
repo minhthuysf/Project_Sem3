@@ -1,0 +1,131 @@
+﻿@model RailwayReservationAndManagementSystem.Models.Reservation
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Reservation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfTravel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfTravel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartStationCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartStationCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndStationCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndStationCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CoachNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CoachNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClassID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClassID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPassenger)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalPassenger)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SeatNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeatNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalFee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalFee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReservateDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReservateDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cancellation.CancelID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cancellation.CancelID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Class.ClassID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Class.ClassID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Passenger.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Passenger.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Train.TrainName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Train.TrainName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ReservationID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

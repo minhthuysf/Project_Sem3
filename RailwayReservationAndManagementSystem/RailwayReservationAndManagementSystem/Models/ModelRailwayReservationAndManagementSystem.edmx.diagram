@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c0da45822f1c4d1b8011d93a77115f14" Name="Diagram1">
+        <EntityTypeShape EntityType="dbRailwayReservationAndManagementSystemModel.BetweenStation" Width="1.5" PointX="11.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbRailwayReservationAndManagementSystemModel.Cancellation" Width="1.5" PointX="8.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbRailwayReservationAndManagementSystemModel.CancellationRule" Width="1.5" PointX="6" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbRailwayReservationAndManagementSystemModel.Class" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbRailwayReservationAndManagementSystemModel.Passenger" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbRailwayReservationAndManagementSystemModel.Reservation" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbRailwayReservationAndManagementSystemModel.Station" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbRailwayReservationAndManagementSystemModel.sysdiagram" Width="1.5" PointX="5.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbRailwayReservationAndManagementSystemModel.Train" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbRailwayReservationAndManagementSystemModel.TrainSchedule" Width="1.5" PointX="6" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbRailwayReservationAndManagementSystemModel.User" Width="1.5" PointX="7.75" PointY="9.375" IsExpanded="true" />
+        <AssociationConnector Association="dbRailwayReservationAndManagementSystemModel.FK_BetweenStation_Station" ManuallyRouted="false" />
+        <AssociationConnector Association="dbRailwayReservationAndManagementSystemModel.FK_BetweenStation_TrainSchedule" ManuallyRouted="false" />
+        <AssociationConnector Association="dbRailwayReservationAndManagementSystemModel.FK_Cancellation_CancellationRules1" ManuallyRouted="false" />
+        <AssociationConnector Association="dbRailwayReservationAndManagementSystemModel.FK_Cancellation_Reservation" ManuallyRouted="false" />
+        <AssociationConnector Association="dbRailwayReservationAndManagementSystemModel.FK_Reservation_Class" ManuallyRouted="false" />
+        <AssociationConnector Association="dbRailwayReservationAndManagementSystemModel.FK_Reservation_Passenger" ManuallyRouted="false" />
+        <AssociationConnector Association="dbRailwayReservationAndManagementSystemModel.FK_Reservation_Train" ManuallyRouted="false" />
+        <AssociationConnector Association="dbRailwayReservationAndManagementSystemModel.FK_TrainSchedule_Station" ManuallyRouted="false" />
+        <AssociationConnector Association="dbRailwayReservationAndManagementSystemModel.FK_TrainSchedule_Train" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,7 @@
+﻿.ui-autocomplete-loading
+{
+    background:
+        url('/Content/images/ajax-loader.gif')
+        no-repeat
+        right center;
+}

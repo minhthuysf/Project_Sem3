@@ -1,0 +1,99 @@
+﻿@model RailwayReservationAndManagementSystem.Models.Train
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div class="container-fluid" id="container-wrapper">
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Detail information of train </h1>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./">Home</a></li>
+                <li class="breadcrumb-item">Train List</li>
+                <li class="breadcrumb-item active" aria-current="page">Details</li>
+            </ol>
+        </div>
+        <form>
+            <div class="form-group row">
+                <b><label for="staticEmail" class="col-sm-12 col-form-label"> @Html.DisplayNameFor(model => model.TrainNo):</label></b>
+                <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" @Html.DisplayFor(model => model.TrainNo)">
+                </div>
+            </div>
+            <div class="form-group row">
+                <b><label for="staticEmail" class="col-sm-12 col-form-label"> @Html.DisplayNameFor(model => model.TrainName):</label></b>
+                <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" @Html.DisplayFor(model => model.TrainName)">
+                </div>
+            </div>
+            <div class="form-group row">
+                <b><label for="staticEmail" class="col-sm-12 col-form-label"> @Html.DisplayNameFor(model => model.DepartureTime):</label></b>
+                <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" @Html.DisplayFor(model => model.DepartureTime)">
+                </div>
+            </div>
+            <div class="form-group row">
+                <b><label for="staticEmail" class="col-sm-12 col-form-label"> @Html.DisplayNameFor(model => model.NoOfCoach):</label></b>
+                <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" @Html.DisplayFor(model => model.NoOfCoach)">
+                </div>
+            </div>
+            <div class="form-group row">
+                <b><label for="staticEmail" class="col-sm-12 col-form-label"> @Html.DisplayNameFor(model => model.NoOfCompartment):</label></b>
+                <div class="col-sm-1">
+                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" @Html.DisplayFor(model => model.NoOfCompartment)">
+                </div>
+            </div>
+            <div class="form-group row">
+                <b><label for="staticEmail" class="col-sm-2 col-form-label"> @Html.DisplayNameFor(model => model.C1AC): </label></b>
+                <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" @Html.DisplayFor(model => model.C1AC)">
+                </div>
+            </div>
+            <div class="form-group row">
+                <b><label for="staticEmail" class="col-sm-12 col-form-label"> @Html.DisplayNameFor(model => model.C2AC):</label></b>
+                <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" @Html.DisplayFor(model => model.C2AC)">
+                </div>
+            </div>
+            <div class="form-group row">
+                <b><label for="staticEmail" class="col-sm-2 col-form-label"> @Html.DisplayNameFor(model => model.C3AC):</label></b>
+                <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" @Html.DisplayFor(model => model.C3AC)">
+                </div>
+            </div>
+            <div class="form-group row">
+                <b><label for="staticEmail" class="col-sm-2 col-form-label"> @Html.DisplayNameFor(model => model.Sleeper):</label></b>
+                <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" @Html.DisplayFor(model => model.Sleeper)">
+                </div>
+            </div>
+            <div class="form-group row">
+                <b><label for="staticEmail" class="col-sm-2 col-form-label"> @Html.DisplayNameFor(model => model.General):</label></b>
+                <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" @Html.DisplayFor(model => model.General)">
+                </div>
+            </div>
+            <div class="form-group row">
+                <b><label for="staticEmail" class="col-sm-2 col-form-label"> @Html.DisplayNameFor(model => model.Status):</label></b>
+                <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="@ViewBag.Status">
+                </div>
+            </div>
+        </form>
+        </div>
+
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.TrainID }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+</body>
+</html>

@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\project\RailwayReservationAndManagementSystem\RailwayReservationAndManagementSystem\Models\ModelRailwayReservationAndManagementSystem.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\Github\New folder\Project_Sem3\RailwayReservationAndManagementSystem\RailwayReservationAndManagementSystem\Models\ModelRailwayReservationAndManagementSystem.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@model IEnumerable<RailwayReservationAndManagementSystem.Models.CancellationRule>
+
+@{ Layout = null; }
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,27 +11,27 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="img/logo/logo.png" rel="icon">
-    <title>RuangAdmin - Dashboard</title>
+    <title>RuangAdmin - DataTables</title>
     <link href="~/Content/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="~/Content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="~/Content/css/ruang-admin.min.css" rel="stylesheet">
-  
+    <link href="~/Content/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
 </head>
 
-<body>
-
+<body id="page-top" style="font-size:13px">
     <div id="wrapper">
         <!-- Sidebar -->
         <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon">
-                    <img src="~/Content/img/logo/logo2.png">
+                    <img src="img/logo/logo2.png">
                 </div>
-                <div class="sidebar-brand-text mx-3">Admin</div>
+                <div class="sidebar-brand-text mx-3">RuangAdmin</div>
             </a>
             <hr class="sidebar-divider my-0">
-            <li class="nav-item active">
-                <a class="nav-link" href="charts.html">
+            <li class="nav-item ">
+                <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
@@ -37,8 +40,8 @@
             <div class="sidebar-heading">
                 Manage
             </div>
-            <li class="nav-item">
-                <a class="nav-link" href="/Users/Index/">
+            <li class="nav-item ">
+                <a class="nav-link" href="">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>User</span>
                 </a>
@@ -57,8 +60,7 @@
                 </a>
                 <div id="collapseForm" class="collapse show" aria-labelledby="headingForm" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-
-                        <a class="collapse-item" href="/Trains/Index/">Train List</a>
+                        <a class="collapse-item active" href="/Trains/Index/">Train List</a>
                         <a class="collapse-item" href="/TrainSchedules/Index/">Train Schedule</a>
                         <a class="collapse-item" href="/Classes/Index/">Class</a>
                     </div>
@@ -84,7 +86,6 @@
                     </div>
                 </div>
             </li>
-            
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage" aria-expanded="true"
                    aria-controls="collapsePage">
@@ -307,42 +308,130 @@
                 </nav>
                 <!-- Topbar -->
                 <!-- Container Fluid-->
+
                 <div class="container-fluid" id="container-wrapper">
-                    @RenderBody()
-                </div>
-                <!---Container Fluid-->
-            </div>
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>
-                            copyright &copy;
-                            <script>document.write(new Date().getFullYear());</script> - developed by
-                            <b><a href="https://indrijunanda.gitlab.io/" target="_blank">indrijunanda</a></b>
-                        </span>
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Cancellation Rule</h1>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="./">Home</a></li>
+                            <li class="breadcrumb-item">Train</li>
+                            <li class="breadcrumb-item active" aria-current="page">Cancellation Rule</li>
+                        </ol>
                     </div>
+
+                    <!-- Row -->
+                    <div class="row">
+                        <!-- Datatables -->
+                        <div class="col-lg-12">
+                            <div class="card mb-4">
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary"><a href="/CancellationRules/Create/">Create new cancellation rule</a></h6>
+                                </div>
+
+                                <div class="table-responsive p-3">
+                                    <table class="table align-items-center table-flush" id="dataTable">
+                                        <thead>
+                                            <tr>
+                                                <th>@Html.DisplayNameFor(model => model.CancelNo)</th>
+                                                <th>@Html.DisplayNameFor(model => model.Details)</th>
+                                                <th>@Html.DisplayNameFor(model => model.CancellationFees)</th>
+                                                
+
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            @foreach (var item in Model)
+                                            {
+                                                <tr>
+                                                    <td>@Html.DisplayFor(modelItem => item.CancelNo)</td>
+                                                    <td>@Html.DisplayFor(modelItem => item.Details)</td>
+                                                    <td>@Html.DisplayFor(modelItem => item.CancellationFees)</td>
+                                                    
+
+                                                    <td>
+
+                                                        @Html.ActionLink("Details", "Details", new { id = item.CancelNo }, new { @class = "glyphicon glyphicon-th", title = "Detail" }) |
+                                                        @Html.ActionLink("Edit", "Edit", new { id = item.CancelNo }, new { @class = "glyphicon glyphicon-edit", title = "Edit" }) |
+                                                        @Html.ActionLink("Delete", "Delete", new { id = item.CancelNo }, new { @class = "glyphicon glyphicon-trash", title = "Delete" })
+
+
+                                                    </td>
+                                                </tr>
+}
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- DataTable with Hover -->
+                        <!--Row-->
+                        <!-- Documentation Link -->
+                        <!-- Modal Logout -->
+                        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
+                             aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Are you sure you want to logout?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+                                        <a href="login.html" class="btn btn-primary">Logout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!---Container Fluid-->
                 </div>
-            </footer>
-            <!-- Footer -->
+
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>
+                                copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> - developed by
+                                <b><a href="https://indrijunanda.gitlab.io/" target="_blank">indrijunanda</a></b>
+                            </span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- Footer -->
+            </div>
         </div>
-    </div>
 
-    <!-- Scroll to top -->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+        <!-- Scroll to top -->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
 
-    @RenderSection("scripts", required: false)
-    <script src="~/Content/vendor/jquery/jquery.min.js"></script>
-    <script src="~/Content/vendor/jquery/jquery.min.js"></script>
-    <script src="~/Content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="~/Content/vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="~/Content/js/ruang-admin.min.js"></script>
-    <script src="~/Content/vendor/chart.js/Chart.min.js"></script>
-    <script src="~/Content/js/demo/chart-area-demo.js"></script>
-    <!-- Page level plugins -->
-    
+        <script src="~/Content/vendor/jquery/jquery.min.js"></script>
+        <script src="~/Content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="~/Content/vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="~/Content/js/ruang-admin.min.js"></script>
+        <!-- Page level plugins -->
+        <script src="~/Content/vendor/datatables/jquery.dataTables.min.js"></script>
+        <script src="~/Content/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+        <!-- Page level custom scripts -->
+        <script>
+            $(document).ready(function () {
+                $('#dataTable').DataTable(); // ID From dataTable
+                $('#dataTableHover').DataTable(); // ID From dataTable with Hover
+            });
+        </script>
+
 </body>
 
 </html>

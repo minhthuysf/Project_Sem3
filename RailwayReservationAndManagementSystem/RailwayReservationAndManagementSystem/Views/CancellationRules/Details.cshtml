@@ -1,0 +1,35 @@
+﻿@model RailwayReservationAndManagementSystem.Models.CancellationRule
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CancellationRule</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Details)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Details)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CancellationFees)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CancellationFees)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CancelNo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

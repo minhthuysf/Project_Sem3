@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\RailwayReservationAndManagementSystem",
+    "\\RailwayReservationAndManagementSystem\\RailwayReservationAndManagementSystem",
+    "\\RailwayReservationAndManagementSystem\\RailwayReservationAndManagementSystem\\Controllers",
+    "\\RailwayReservationAndManagementSystem\\RailwayReservationAndManagementSystem\\Models",
+    "\\RailwayReservationAndManagementSystem\\RailwayReservationAndManagementSystem\\Views",
+    "\\RailwayReservationAndManagementSystem\\RailwayReservationAndManagementSystem\\Views\\Reservations",
+    "\\RailwayReservationAndManagementSystem\\RailwayReservationAndManagementSystem\\Views\\Users"
+  ],
+  "SelectedNode": "\\RailwayReservationAndManagementSystem\\RailwayReservationAndManagementSystem\\Models\\User.cs",
+  "PreviewInSolutionExplorer": false
+}

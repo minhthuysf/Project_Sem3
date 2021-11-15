@@ -1,7 +1,7 @@
 ﻿@model RailwayReservationAndManagementSystem.Models.Train
 
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -20,101 +20,119 @@
             <dt>
                 @Html.DisplayNameFor(model => model.TrainNo)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.TrainNo)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.TrainName)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.TrainName)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.RouteFromTo)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.RouteFromTo)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.DepartureTime)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.DepartureTime)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.NoOfCoach)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.NoOfCoach)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.NoOfCompartment)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.NoOfCompartment)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.C1AC)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.C1AC)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.C2AC)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.C2AC)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.C3AC)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.C3AC)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Sleeper)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Sleeper)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.General)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.General)
             </dd>
-    
+
         </dl>
-    
-        @using (Html.BeginForm()) {
+
+        @using (Html.BeginForm())
+        {
             @Html.AntiForgeryToken()
-    
+
             <div class="form-actions no-color">
-                <input type="submit" value="Delete" class="btn btn-default" /> |
+                <input type="button" value="Delete" class="btn btn-default" data-toggle="modal" data-target="#exampleModal" />
                 @Html.ActionLink("Back to List", "Index")
             </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure ?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input type="submit" value="Yes" class="btn btn-primary" />
+                        </div>
+                    </div>
+                </div>
+            </div>
         }
-    </div>
-</body>
-</html>
